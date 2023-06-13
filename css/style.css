@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root{
+    --main-clr: blueviolet;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    max-width: 1134px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.search{
+    align-self: center;
+    margin: 13px;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+}
+
+.search input{
+    border: none;
+}
+
+.search input:focus{
+    outline: none;
+}
+
+nav h1{
+    margin: auto;
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 13px;
+}
+
+.nav-links li{
+    margin: 13px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.nav-links li i:hover + span {
+    transform: translateY(-2px);
+}
+
+.nav-links li i:hover {
+    color: rgb(131, 123, 123);
+}
+
+.nav-links li:last-child{
+    position: relative;
+}
+
+.nav-links span{
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    display: grid;
+    place-content: center;
+    top: -13px;
+    left: 10px;
+    border-radius: 50%;
+    padding: 3px;
+    font-size: 10px;
+    font-weight: bolder;
+    background-color: var(--main-clr);
+    transition: all 0.3s linear;
+}
+
+.home-links{
+    display: flex;
+    justify-content: center;
+    margin: 13px;
+}
+
+.home-links li{
+    margin: 13px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+header{
+    max-width: 100%;
+    height: 100vh;
+    background: url(../images/hero_1.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+header .right{
+    width: 40%;
+    margin-left: auto;
+}
+
+header .right h1{
+    font-size: 4rem;
+}
+
+header .right p{
+    font-size: 20px;
+    margin-top: 13px;
+    line-height: 2;
+}
+
+button{
+    background-color: var(--main-clr);
+    padding: 13px 17px;
+    border: none;
+    border-radius: 7px;
+    color: #fff;
+    letter-spacing: 3px;
+    margin-top: 13px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s linear;
+}
+
+button:hover{
+    background-color: rebeccapurple;
+    transform: translateY(-5px);
+}
+
+.featuers{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1134px;
+    margin: 50px auto;
+}
+
+.featuers .featuer{
+    display: flex;
+    gap: 20px;
+}
+
+.featuers .featuer .icon{
+    color: var(--main-clr);
+    font-size: 2rem;
+}
+
+.featuers .featuer .text h3{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.featuers .featuer .text p{
+    line-height: 1.5;
+}
+
+.collections{
+    display: flex;
+    justify-content: space-around;
+    gap: 13px;
+    max-width: 1134px;
+    margin: 50px auto;
+}
+
+.collections .collect-women,
+.collect-children,
+.collect-men{
+    background-size: auto 100%;
+    background-position: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 400px;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.collections .collect-women{
+    background-image: url(../images/women.jpg);
+}
+
+.collections .collect-children{
+    background-image: url(../images/children.jpg);
+}
+
+.collections .collect-men{
+    background-image: url(../images/men.jpg);
+}
+
+.collections .overlay{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.2;
+}
+
+.collections .category{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.collections .category h1{
+    font-size: 2.5rem;
+    text-transform: capitalize;
+}
+
+.collections .collect-men:hover,
+.collect-children:hover,
+.collect-women:hover{
+    transform: scale(1.1);
+}
+
+.wrapper{
+    background-color: rgb(240, 240, 240);
+    padding: 30px 0;
+}
+
+.products{
+    max-width: 1134px;
+    margin: auto;
+}
+
+.products .top-line{
+    margin: 18px auto;
+    width: 60px;
+    height: 3px;
+    background-color: var(--main-clr);
+    margin-top: 20px;
+}
+
+.products h1{
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+}
+
+.products .products-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.products .products-container .card{
+    background-color: #fff;
+}
+
+.products .products-container .card img{
+    width: 300px;
+}
+
+.products .products-container .card .info{
+    text-align: center;
+    line-height: 1.5;
+    background-color: #fff;
+    padding: 13px;
+}
+
+.products .products-container .card .info h3, .price{
+    color: var(--main-clr);
+    text-transform: capitalize;
+}
+
+.sale-section{
+    padding: 30px 0;
+}
+
+.sale-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.sale-container .left img{
+    width: 100%;
+}
+
+.sale-container .right{
+    text-align: center;
+}
+
+.sale-container .right h1, .sale-container .right span{
+    color: var(--main-clr);
+    margin-bottom: 10px;
+}
+
+.sale-container .right .sale-text{
+    line-height: 1.5;
+    margin-top: 22px;
+}
+
+.footer-container{
+    max-width: 1134px;
+    margin: auto;
+    display: flex;
+}
+
+footer{
+    padding: 30px 0;
+}
+
+.footer-container>div{
+    flex: 1;
+}
+
+.footer-container>div h1, ul li{
+    margin-bottom: 13px;
+}
+
+.footer-container .logo{
+    width: 190px;
+}
+
+.footer-container h5{
+    color: var(--main-clr);
+    margin: 10px 0 2px;
+}
+
+.footer-container .promo-text{
+    font-size: 13px;
+}
+
+.footer-container .contact p{
+    margin-bottom: 10px;
+}
+
+.footer-container .contact p>i{
+    color: var(--main-clr);
+    margin-right: 7px;
+}
+
+.footer-container form {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 7px;
+}
+
+.footer-container .subscribe label{
+    margin-bottom: 5px;
+    display: block;
+}
+
+.footer-container .subscribe input{
+    padding: 7px;
+    border: none;
+}
+
+.footer-container .subscribe input:focus{
+    outline: none;
+}
+
+.footer-container .subscribe .send-btn{
+    margin-top: 0;
+}
+
+.copyright{
+    text-align: center;
+    margin: 50px auto;
+}
